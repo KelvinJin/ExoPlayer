@@ -453,6 +453,10 @@ public class SimpleExoPlayer implements ExoPlayer, Player.VideoComponent, Player
     metadataOutputs.add(listener);
   }
 
+  public void addMetadataOutput(MetadataRenderer.Output listener) {
+    metadataOutputs.add(listener);
+  }
+
   public void removeMetadataOutput(MetadataOutput listener) {
     metadataOutputs.remove(listener);
   }
