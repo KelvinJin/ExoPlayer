@@ -37,6 +37,7 @@ import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.text.Cue;
 import com.google.android.exoplayer2.text.TextOutput;
+import com.google.android.exoplayer2.text.TextRenderer;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.util.Clock;
@@ -417,6 +418,10 @@ public class SimpleExoPlayer implements ExoPlayer, Player.VideoComponent, Player
 
   @Override
   public void addTextOutput(TextOutput listener) {
+    textOutputs.add(listener);
+  }
+
+  public void addTextOutput(TextRenderer.Output listener) {
     textOutputs.add(listener);
   }
 
